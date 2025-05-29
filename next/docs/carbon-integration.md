@@ -9,7 +9,15 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `DataTable`, `Tile`, `Pagination`
 - **Implementation**:
   ```jsx
-  import { DataTable, Table, TableHead, TableRow, TableHeader, TableBody, TableCell } from '@carbon/react';
+  import {
+    DataTable,
+    Table,
+    TableHead,
+    TableRow,
+    TableHeader,
+    TableBody,
+    TableCell,
+  } from "@carbon/react";
   ```
   - Use `DataTable` with server-side pagination for large theme collections
   - `Tile` components display theme previews with hover effects
@@ -19,7 +27,13 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `Modal`, `Tabs`, `CodeSnippet`
 - **Implementation**:
   ```jsx
-  import { ComposedModal, ModalHeader, ModalBody, Tabs, Tab } from '@carbon/react';
+  import {
+    ComposedModal,
+    ModalHeader,
+    ModalBody,
+    Tabs,
+    Tab,
+  } from "@carbon/react";
   ```
   - `ComposedModal` with dynamic theme injection
   - `Tabs` for light/dark mode comparisons
@@ -29,7 +43,7 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `Button`, `Notification`
 - **Implementation**:
   ```jsx
-  import { Button } from '@carbon/react';
+  import { Button } from "@carbon/react";
   ```
   - Primary `Button` with installation handler
   - `Notification` component for success/error feedback
@@ -39,7 +53,7 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `Checkbox`, `List`
 - **Implementation**:
   ```jsx
-  import { Checkbox, List, ListItem } from '@carbon/react';
+  import { Checkbox, List, ListItem } from "@carbon/react";
   ```
   - `Checkbox` for theme selection
   - `List` with drag-and-drop reordering
@@ -49,7 +63,7 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `Share`, `Button`
 - **Implementation**:
   ```jsx
-  import { Share } from '@carbon/react';
+  import { Share } from "@carbon/react";
   ```
   - Integrated `Share` component with platform-specific handlers
 
@@ -58,7 +72,7 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `Accordion`, `Tooltip`, `Tag`
 - **Implementation**:
   ```jsx
-  import { Accordion, Tooltip, Tag } from '@carbon/react';
+  import { Accordion, Tooltip, Tag } from "@carbon/react";
   ```
   - `Accordion` for expandable brand guidelines
   - `Tooltip` for color palette hex codes
@@ -68,7 +82,7 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `Header`, `SideNav`, `Breadcrumb`
 - **Implementation**:
   ```jsx
-  import { Header, SideNav, Breadcrumb } from '@carbon/react';
+  import { Header, SideNav, Breadcrumb } from "@carbon/react";
   ```
   - Responsive layout with collapsible `SideNav`
 
@@ -77,7 +91,7 @@ This document outlines how the IBM Carbon Design System components are mapped to
 - **Carbon Components**: `ProgressIndicator`, `Notification`
 - **Implementation**:
   ```jsx
-  import { ProgressIndicator } from '@carbon/react';
+  import { ProgressIndicator } from "@carbon/react";
   ```
   - `ProgressIndicator` for update tracking
   - `Notification` for compatibility alerts

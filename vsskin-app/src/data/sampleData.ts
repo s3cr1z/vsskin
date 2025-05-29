@@ -9,6 +9,13 @@ export const sampleBrands: Brand[] = [
     primaryColor: '#1ed760',
     secondaryColor: '#1db954',
     website: 'https://spotify.com',
+    domain: 'spotify.com',
+    primary: '#1ed760',
+    colors: {
+      primary: '#1ed760',
+      secondary: '#1db954',
+      accent: '#ffffff'
+    },
     guidelines: {
       colors: {
         primary: ['#1ed760', '#1db954', '#1aa34a'],
@@ -31,6 +38,13 @@ export const sampleBrands: Brand[] = [
     primaryColor: '#007aff',
     secondaryColor: '#5856d6',
     website: 'https://apple.com',
+    domain: 'apple.com',
+    primary: '#007aff',
+    colors: {
+      primary: '#007aff',
+      secondary: '#5856d6',
+      accent: '#ff9500'
+    },
     guidelines: {
       colors: {
         primary: ['#007aff', '#5856d6', '#ff9500'],
@@ -53,6 +67,13 @@ export const sampleBrands: Brand[] = [
     primaryColor: '#24292e',
     secondaryColor: '#0366d6',
     website: 'https://github.com',
+    domain: 'github.com',
+    primary: '#24292e',
+    colors: {
+      primary: '#24292e',
+      secondary: '#0366d6',
+      accent: '#28a745'
+    },
     guidelines: {
       colors: {
         primary: ['#24292e', '#0366d6', '#28a745'],
@@ -75,6 +96,13 @@ export const sampleBrands: Brand[] = [
     primaryColor: '#5865f2',
     secondaryColor: '#4752c4',
     website: 'https://discord.com',
+    domain: 'discord.com',
+    primary: '#5865f2',
+    colors: {
+      primary: '#5865f2',
+      secondary: '#4752c4',
+      accent: '#7289da'
+    },
     guidelines: {
       colors: {
         primary: ['#5865f2', '#4752c4', '#3c45a5'],
@@ -97,6 +125,13 @@ export const sampleBrands: Brand[] = [
     primaryColor: '#4a154b',
     secondaryColor: '#36c5f0',
     website: 'https://slack.com',
+    domain: 'slack.com',
+    primary: '#4a154b',
+    colors: {
+      primary: '#4a154b',
+      secondary: '#36c5f0',
+      accent: '#2eb67d'
+    },
     guidelines: {
       colors: {
         primary: ['#4a154b', '#36c5f0', '#2eb67d'],
@@ -121,6 +156,7 @@ export const sampleThemes: Theme[] = [
     description: 'A dark theme inspired by Spotify\'s signature green and black design',
     brand: sampleBrands[0], // Spotify
     type: 'dark',
+    tags: ['spotify', 'dark', 'green', 'music'],
     colors: {
       'editor.background': '#191414',
       'editor.foreground': '#ffffff',
@@ -176,7 +212,9 @@ const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({ isPlaying, currentTrack }
       downloads: 1250,
       rating: 4.8,
       lastUpdated: '2024-05-15',
-      compatibility: ['1.70.0', '1.80.0', '1.90.0']
+      compatibility: ['1.70.0', '1.80.0', '1.90.0'],
+      description: 'A dark theme inspired by Spotify\'s signature green and black design',
+      repository: 'https://github.com/vsskin/themes/tree/main/spotify-dark'
     }
   },
   {
@@ -186,6 +224,7 @@ const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({ isPlaying, currentTrack }
     description: 'A clean, minimalist light theme inspired by Apple\'s design language',
     brand: sampleBrands[1], // Apple
     type: 'light',
+    tags: ['apple', 'light', 'minimal', 'clean'],
     colors: {
       'editor.background': '#ffffff',
       'editor.foreground': '#1c1c1e',
@@ -244,7 +283,9 @@ const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({ isPlaying, currentTrack }
       downloads: 980,
       rating: 4.6,
       lastUpdated: '2024-05-10',
-      compatibility: ['1.70.0', '1.80.0', '1.90.0']
+      compatibility: ['1.70.0', '1.80.0', '1.90.0'],
+      description: 'A clean, minimalist light theme inspired by Apple\'s design language',
+      repository: 'https://github.com/vsskin/themes/tree/main/apple-light'
     }
   },
   {
@@ -254,6 +295,7 @@ const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({ isPlaying, currentTrack }
     description: 'The familiar GitHub dark theme for your VS Code editor',
     brand: sampleBrands[2], // GitHub
     type: 'dark',
+    tags: ['github', 'dark', 'code', 'familiar'],
     colors: {
       'editor.background': '#0d1117',
       'editor.foreground': '#e6edf3',
@@ -308,7 +350,9 @@ const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({ isPlaying, currentTrack }
       downloads: 2100,
       rating: 4.9,
       lastUpdated: '2024-05-20',
-      compatibility: ['1.70.0', '1.80.0', '1.90.0']
+      compatibility: ['1.70.0', '1.80.0', '1.90.0'],
+      description: 'The familiar GitHub dark theme for your VS Code editor',
+      repository: 'https://github.com/vsskin/themes/tree/main/github-dark'
     }
   }
 ];

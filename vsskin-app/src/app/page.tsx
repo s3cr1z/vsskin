@@ -1,6 +1,7 @@
 'use client';
 
-import React, { Suspense, ErrorBoundary } from 'react';
+import React, { Suspense } from 'react';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import AppLayout from '@/components/AppLayout';
 import ThemeBrowser from '@/components/ThemeBrowser';
 import { fetchAllBrands } from '@/lib/brandApi';

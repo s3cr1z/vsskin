@@ -1,8 +1,8 @@
 'use client';
 
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
-import { Theme, Brand, ThemeFilters, ThemeSortOptions, ThemeContextType } from '@/types';
-import { sampleThemes, sampleBrands } from '@/data/sampleData';
+import { sampleBrands, sampleThemes } from '@/data/sampleData';
+import { Brand, Theme, ThemeContextType, ThemeFilters, ThemeSortOptions } from '@/types';
+import React, { createContext, ReactNode, useContext, useReducer } from 'react';
 
 // Initial state
 const initialFilters: ThemeFilters = {
@@ -21,8 +21,8 @@ const initialState = {
   themes: sampleThemes,
   brands: sampleBrands,
   loading: false,
-  error: null,
-  selectedTheme: null,
+  error: null as string | null,
+  selectedTheme: null as Theme | null,
   filters: initialFilters,
   sortOptions: initialSortOptions
 };

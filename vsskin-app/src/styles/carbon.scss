@@ -1,10 +1,11 @@
 // Carbon Design System imports
-@use '@carbon/styles';
 @use '@carbon/styles/scss/themes';
 @use '@carbon/styles/scss/theme' with (
   $theme: themes.$g10
 );
 @use '@carbon/styles/scss/components';
+@use '@carbon/styles/scss/grid';
+@use '@carbon/styles/scss/utilities';
 
 // Custom theme tokens for vsskin
 :root {

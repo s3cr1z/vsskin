@@ -49,14 +49,14 @@ export default function ThemeCard({
       >
         {/* Theme Preview */}
         <div className="theme-preview">
-          <div 
+          <div
             className="theme-preview-image"
             style={{
               background: `linear-gradient(135deg, ${theme.colors['editor.background']}, ${theme.colors['sideBar.background']})`
             }}
           >
             <div className="vscode-mockup">
-              <div 
+              <div
                 className="vscode-titlebar"
                 style={{ backgroundColor: theme.colors['titleBar.activeBackground'] }}
               >
@@ -65,7 +65,7 @@ export default function ThemeCard({
                   <span></span>
                   <span></span>
                 </div>
-                <span 
+                <span
                   className="vscode-title"
                   style={{ color: theme.colors['titleBar.activeForeground'] }}
                 >
@@ -73,27 +73,27 @@ export default function ThemeCard({
                 </span>
               </div>
               <div className="vscode-body">
-                <div 
+                <div
                   className="vscode-sidebar"
                   style={{ backgroundColor: theme.colors['sideBar.background'] }}
                 >
-                  <div 
+                  <div
                     className="vscode-activity-bar"
                     style={{ backgroundColor: theme.colors['activityBar.background'] }}
                   ></div>
                 </div>
-                <div 
+                <div
                   className="vscode-editor"
                   style={{ backgroundColor: theme.colors['editor.background'] }}
                 >
                   <div className="code-lines">
                     <div className="code-line">
-                      <span style={{ color: theme.brand.primaryColor }}>function</span>
+                      <span style={{ color: theme.brand?.primary || theme.colors['editor.foreground'] }}>function</span>
                       <span style={{ color: theme.colors['editor.foreground'] }}> hello() {`{`}</span>
                     </div>
                     <div className="code-line">
                       <span style={{ color: theme.colors['editor.foreground'] }}>  return </span>
-                      <span style={{ color: theme.brand.secondaryColor }}>"Hello World"</span>
+                      <span style={{ color: theme.brand?.secondaryColor || theme.colors['string.foreground'] || '#89d185' }}>"Hello World"</span>
                     </div>
                     <div className="code-line">
                       <span style={{ color: theme.colors['editor.foreground'] }}>{`}`}</span>
@@ -101,13 +101,13 @@ export default function ThemeCard({
                   </div>
                 </div>
               </div>
-              <div 
+              <div
                 className="vscode-statusbar"
                 style={{ backgroundColor: theme.colors['statusBar.background'] }}
               ></div>
             </div>
           </div>
-          
+
           {/* Favorite Button */}
           {onFavorite && (
             <Button
@@ -126,9 +126,12 @@ export default function ThemeCard({
         <div className="theme-info">
           <div className="theme-header">
             <h3 className="theme-name">{theme.displayName}</h3>
-            <div className="brand-badge" style={{ backgroundColor: `${theme.brand.primaryColor}20`, color: theme.brand.primaryColor }}>
-              <img 
-                src={theme.brand.logo} 
+            <div className="brand-badge" style={{
+              backgroundColor: `${theme.brand?.primary || '#0072c6'}20`,
+              color: theme.brand?.primary || '#0072c6'
+            }}>
+              <img
+                src={theme.brand.logo}
                 alt={theme.brand.displayName}
                 className="brand-logo"
                 onError={(e) => {
@@ -139,9 +142,9 @@ export default function ThemeCard({
               {theme.brand.displayName}
             </div>
           </div>
-          
+
           <p className="theme-description">{theme.description}</p>
-          
+
           <div className="theme-tags">
             <Tag type={theme.type === 'dark' ? 'cool-gray' : 'warm-gray'} size="sm">
               {theme.type}
@@ -152,7 +155,7 @@ export default function ThemeCard({
               </Tag>
             ))}
           </div>
-          
+
           <div className="theme-stats">
             <div className="stat">
               <Star size={16} />

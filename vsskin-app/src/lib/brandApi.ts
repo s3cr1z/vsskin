@@ -167,31 +167,45 @@ class BrandApiServiceImpl implements BrandApiService {
   }
 
   transformToBrand(brandfetchData: BrandfetchResponse): Brand {
-    const primaryColor = brandfetchData.colors?.find(c => c.type === 'accent') || 
-                        brandfetchData.colors?.[0] || 
-                        { hex: '#000000' };
-    
-    const secondaryColor = brandfetchData.colors?.find(c => c.type === 'dark') || 
-                          brandfetchData.colors?.[1] || 
-                          { hex: '#666666' };
+    const primaryColor = brandfetchData.colors?.find(c => c.type === 'accent') ||
+      brandfetchData.colors?.[0] ||
+      { hex: '#000000' };
+
+    const secondaryColor = brandfetchData.colors?.find(c => c.type === 'dark') ||
+      brandfetchData.colors?.[1] ||
+      { hex: '#666666' };
 
     const primaryFont = brandfetchData.fonts?.[0]?.name || 'Inter';
     const logoUrl = brandfetchData.logo?.[0]?.formats?.[0]?.src || '';
 
     return {
       id: brandfetchData.domain.replace('.', '-'),
+      name: brandfetchData.name,
       displayName: brandfetchData.name,
+      domain: brandfetchData.domain,
+      website: `https://${brandfetchData.domain}`,
+      primary: primaryColor.hex,
+      primaryColor: primaryColor.hex,
+      secondaryColor: secondaryColor.hex,
+      logo: logoUrl,
       colors: {
         primary: primaryColor.hex,
         secondary: secondaryColor.hex,
         accent: brandfetchData.colors?.find(c => c.type === 'light')?.hex || '#FFFFFF'
       },
-      fonts: {
-        primary: primaryFont,
-        secondary: brandfetchData.fonts?.[1]?.name
-      },
-      logoUrl,
-      brandUrl: `https://${brandfetchData.domain}`
+      guidelines: {
+        colors: {
+          primary: [primaryColor.hex],
+          secondary: [secondaryColor.hex],
+          accent: [brandfetchData.colors?.find(c => c.type === 'light')?.hex || '#FFFFFF']
+        },
+        fonts: {
+          primary: primaryFont,
+          secondary: brandfetchData.fonts?.[1]?.name || 'Arial'
+        },
+        logoUrl,
+        brandUrl: `https://${brandfetchData.domain}`
+      }
     };
   }
 

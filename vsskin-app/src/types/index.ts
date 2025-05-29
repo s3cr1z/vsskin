@@ -7,6 +7,7 @@ export interface Theme {
   brand: Brand;
   colors: ThemeColors;
   type: 'light' | 'dark';
+  tags: string[];
   preview: ThemePreview;
   installation: ThemeInstallation;
   metadata: ThemeMetadata;
@@ -14,18 +15,32 @@ export interface Theme {
 
 export interface Brand {
   id: string;
+  name: string;
   displayName: string;
+  logo: string;
+  primaryColor: string;
+  secondaryColor: string;
+  website: string;
+  domain: string;
+  primary: string;
   colors: {
     primary: string;
     secondary: string;
     accent: string;
   };
-  fonts: {
-    primary: string;
-    secondary?: string;
+  guidelines: {
+    colors: {
+      primary: string[];
+      secondary: string[];
+      accent: string[];
+    };
+    fonts: {
+      primary: string;
+      secondary: string;
+    };
+    logoUrl: string;
+    brandUrl: string;
   };
-  logoUrl: string;
-  brandUrl: string;
 }
 
 export interface ThemeColors {
@@ -71,6 +86,9 @@ export interface ThemeMetadata {
   rating: number;
   lastUpdated: string;
   compatibility: string[];
+  preview?: string;
+  description: string;
+  repository: string;
 }
 
 // Filter and search types

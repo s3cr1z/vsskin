@@ -29,6 +29,7 @@
 - **Version Control Tools**: Such as Git for managing theme updates and changes.
 
 ## Detailed Plan
+
 ```mermaid
 graph TD;
     A[Define Project Scope] --> B[Identify Key Features];

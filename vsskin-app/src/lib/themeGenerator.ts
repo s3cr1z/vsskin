@@ -28,7 +28,8 @@ export interface ExtendedThemeMetadata {
   rating: number;
   downloads: number;
   lastUpdated: string;
-  preview: ThemePreview;
+  compatibility: string[];
+  preview?: string;
 }
 
 class ThemeGeneratorService {
@@ -45,24 +46,27 @@ class ThemeGeneratorService {
     return {
       id: `${brand.id}-${options.variant}-${options.style}`,
       name: `${brand.displayName} ${options.variant === 'dark' ? 'Dark' : 'Light'} ${this.capitalizeFirst(options.style)}`,
-      variant: options.variant,
+      displayName: `${brand.displayName} ${options.variant === 'dark' ? 'Dark' : 'Light'} ${this.capitalizeFirst(options.style)}`,
+      description: `A ${options.variant} VS Code theme inspired by ${brand.displayName} brand colors and design language.`,
+      type: options.variant,
       brand,
       colors,
-      metadata: {
-        ...metadata,
-        tags: [
-          options.variant,
-          options.style,
-          brand.displayName.toLowerCase(),
-          ...this.generateTagsFromBrand(brand)
-        ],
-        preview: {
-          editorBackground: colors['editor.background'],
-          sidebarBackground: colors['sideBar.background'],
-          activityBarBackground: colors['activityBar.background'],
-          statusBarBackground: colors['statusBar.background']
-        }
-      }
+      tags: [
+        options.variant,
+        options.style,
+        brand.displayName.toLowerCase(),
+        ...this.generateTagsFromBrand(brand)
+      ],
+      preview: {
+        screenshots: [],
+        codeSnippets: [],
+        miniPreview: `${colors['editor.background']},${colors['sideBar.background']},${colors['activityBar.background']},${colors['statusBar.background']}`
+      },
+      installation: {
+        downloadUrl: '#',
+        installInstructions: []
+      },
+      metadata
     };
   }
 
@@ -248,19 +252,15 @@ class ThemeGeneratorService {
   private generateThemeMetadata(brand: Brand, options: ThemeGenerationOptions): ExtendedThemeMetadata {
     return {
       version: '1.0.0',
-      description: `A ${options.variant} VS Code theme inspired by ${brand.displayName}'s brand colors and design language.`,
+      description: `A ${options.variant} VS Code theme inspired by ${brand.displayName} brand colors and design language.`,
       author: 'vsskin Theme Generator',
       repository: 'https://github.com/vsskin/themes',
       tags: [],
       rating: 0,
       downloads: 0,
       lastUpdated: new Date().toISOString(),
-      preview: {
-        editorBackground: '#000000',
-        sidebarBackground: '#000000',
-        activityBarBackground: '#000000',
-        statusBarBackground: '#000000'
-      }
+      compatibility: ['1.70.0', '1.80.0', '1.90.0'],
+      preview: `#000000,#000000,#000000,#000000`
     };
   }
 
