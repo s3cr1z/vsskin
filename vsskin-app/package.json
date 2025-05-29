@@ -1,0 +1,39 @@
+{
+     "name": "vsskin-app",
+     "version": "0.1.0",
+     "private": true,
+     "scripts": {
+          "dev": "next dev --turbopack",
+          "build": "next build",
+          "start": "next start",
+          "lint": "next lint",
+          "test:keploy": "jest --coverage --config='{\"testEnvironment\":\"jsdom\",\"transform\":{\"^.+\\\\.(js|jsx|ts|tsx)$\":[\"@swc/jest\",{\"jsc\":{\"parser\":{\"syntax\":\"typescript\",\"tsx\":true,\"dynamicImport\":true},\"transform\":{\"react\":{\"runtime\":\"automatic\"}}},\"module\":{\"type\":\"commonjs\"}}]},\"moduleFileExtensions\":[\"js\",\"jsx\",\"ts\",\"tsx\"],\"coveragePathIgnorePatterns\":[\"/monaco-editor/\"],\"collectCoverageFrom\":[\"./**/*.{js,jsx,ts,tsx}\"],\"coverageDirectory\":\".\",\"coverageReporters\":[\"text\",\"cobertura\"]}'"
+     },
+     "dependencies": {
+          "@carbon/icons-react": "^11.60.0",
+          "@carbon/react": "^1.83.0",
+          "@carbon/styles": "^1.82.0",
+          "@carbon/web-components": "^2.30.0",
+          "@types/jszip": "^3.4.0",
+          "axios": "^1.9.0",
+          "classnames": "^2.5.1",
+          "clsx": "^2.1.1",
+          "jszip": "^3.10.1",
+          "next": "15.3.2",
+          "react": "^19.0.0",
+          "react-dom": "^19.0.0",
+          "sass": "^1.89.0"
+     },
+     "devDependencies": {
+          "@eslint/eslintrc": "^3",
+          "@tailwindcss/postcss": "^4",
+          "@types/node": "^20",
+          "@types/react": "^19",
+          "@types/react-dom": "^19",
+          "eslint": "^9",
+          "eslint-config-next": "15.3.2",
+          "jest": "^29.7.0",
+          "tailwindcss": "^4",
+          "typescript": "^5"
+     }
+}

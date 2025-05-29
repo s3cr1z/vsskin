@@ -2,7 +2,7 @@
 
 This plan outlines the key architectural components and their interactions for the vsskin web app. The app will be built using React and leverage the IBM Carbon Design System for its UI components.
 
-## I. Core Components:
+## I. Core Components
 
 * **Theme Data Management:** This component will handle fetching, storing, and managing theme data. It will likely interact with a backend API (if one is planned) or a local JSON file for storing theme information. This component will be responsible for providing data to other components.
 
@@ -25,18 +25,18 @@ This plan outlines the key architectural components and their interactions for t
 * **Compatibility Layer:** This component will handle compatibility checks with different VS Code versions, using Carbon's \`Notification\` and \`Tooltip\` components for alerts and information.
 
 
-## II. Data Flow:
+## II. Data Flow
 
 The Theme Data Management component acts as the central hub, providing data to the Theme Browser, Theme Preview, and Theme Information components. User interactions in these components will trigger updates in the Theme Data Management component, which will then propagate changes to other components as needed.
 
-## III. Technology Stack:
+## III. Technology Stack
 
 * **Frontend:** React, IBM Carbon Design System React components
 * **State Management:** Redux or Context API (to be determined based on project complexity)
 * **Backend (Optional):** Node.js, Express.js, or a similar framework (if required for theme storage and sharing)
 
 
-## IV. Mermaid Diagram (Simplified):
+## IV. Mermaid Diagram (Simplified)
 
 ```mermaid
 graph LR
