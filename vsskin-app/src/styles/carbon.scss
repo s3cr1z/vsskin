@@ -1,0 +1,94 @@
+// Carbon Design System imports
+@use '@carbon/styles/scss/themes';
+@use '@carbon/styles/scss/theme' with (
+  $theme: themes.$g10
+);
+@use '@carbon/styles/scss/components';
+@use '@carbon/styles/scss/grid';
+@use '@carbon/styles/scss/utilities';
+
+// Custom theme tokens for vsskin
+:root {
+  // Custom brand colors
+  --vsskin-primary: #0f62fe;
+  --vsskin-secondary: #8a3ffc;
+  --vsskin-accent: #ff6b35;
+  --vsskin-success: #42be65;
+  --vsskin-warning: #f1c21b;
+  --vsskin-error: #da1e28;
+  
+  // VS Code theme colors
+  --vscode-bg-dark: #1e1e1e;
+  --vscode-bg-light: #ffffff;
+  --vscode-sidebar-dark: #252526;
+  --vscode-sidebar-light: #f3f3f3;
+  --vscode-editor-dark: #1e1e1e;
+  --vscode-editor-light: #ffffff;
+  
+  // Brand-based theme variables
+  --brand-spotify: #1ed760;
+  --brand-apple: #007aff;
+  --brand-stripe: #635bff;
+  --brand-github: #24292e;
+  --brand-discord: #5865f2;
+  --brand-slack: #4a154b;
+}
+
+// Dark theme overrides
+[data-carbon-theme='g100'] {
+  --vsskin-bg: var(--vscode-bg-dark);
+  --vsskin-sidebar: var(--vscode-sidebar-dark);
+  --vsskin-editor: var(--vscode-editor-dark);
+}
+
+// Light theme overrides
+[data-carbon-theme='white'] {
+  --vsskin-bg: var(--vscode-bg-light);
+  --vsskin-sidebar: var(--vscode-sidebar-light);
+  --vsskin-editor: var(--vscode-editor-light);
+}
+
+// Custom component styles
+.vsskin-theme-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.vsskin-code-preview {
+  font-family: 'Fira Code', 'Monaco', 'Menlo', monospace;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vsskin-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+// Responsive grid overrides
+@media (max-width: 672px) {
+  .vsskin-theme-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 673px) and (max-width: 1056px) {
+  .vsskin-theme-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1057px) {
+  .vsskin-theme-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

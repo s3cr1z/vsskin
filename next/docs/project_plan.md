@@ -1,7 +1,7 @@
 # vsskin Project Plan
 
 ## Project Scope
-The `vsskin` project aims to develop a web-based theme studio for VS Code, providing users with the following features:
+
 - Browse a wide selection of professionally designed themes based on popular tech brands.
 - Preview themes in real-time to see how they will look in the development environment.
 - Install themes with a single click for easy customization of VS Code setups.
@@ -14,7 +14,7 @@ The `vsskin` project aims to develop a web-based theme studio for VS Code, provi
 - Compatibility with various versions of VS Code.
 
 ## High-Level Architecture
-The `vsskin` web-based theme studio will use the IBM Carbon Design System as the main web layout UI to ensure a consistent and professional appearance. Key steps for integration include:
+
 1. Including Carbon Design System CSS and JavaScript files.
 2. Updating HTML structure to use Carbon Design System components and classes.
 3. Ensuring user-friendly navigation and accessibility.
@@ -24,10 +24,12 @@ The `vsskin` web-based theme studio will use the IBM Carbon Design System as the
 7. Encouraging community contributions and feedback for improvements.
 
 ## Dependencies
+
 - **Carbon Design System Libraries**: Required for implementing the web layout UI.
 - **Version Control Tools**: Such as Git for managing theme updates and changes.
 
 ## Detailed Plan
+
 ```mermaid
 graph TD;
     A[Define Project Scope] --> B[Identify Key Features];
@@ -53,7 +55,7 @@ graph TD;
 ```
 
 ## Project Scope and Key Features
-The `vsskin` project aims to develop a web-based theme studio for VS Code, providing users with the following features:
+
 - Browse a wide selection of professionally designed themes based on popular tech brands.
 - Preview themes in real-time to see how they will look in the development environment.
 - Install themes with a single click for easy customization of VS Code setups.
@@ -66,7 +68,7 @@ The `vsskin` project aims to develop a web-based theme studio for VS Code, provi
 - Compatibility with various versions of VS Code.
 
 ## High-Level Architectural Plan
-The `vsskin` web-based theme studio will use the IBM Carbon Design System as the main web layout UI to ensure a consistent and professional appearance. Key steps for integration include:
+
 1. Including Carbon Design System CSS and JavaScript files.
 2. Updating HTML structure to use Carbon Design System components and classes.
 3. Ensuring user-friendly navigation and accessibility.
@@ -76,6 +78,7 @@ The `vsskin` web-based theme studio will use the IBM Carbon Design System as the
 7. Encouraging community contributions and feedback for improvements.
 
 ## Dependencies and Detailed Plan
+
 - **Carbon Design System Libraries**: Required for implementing the web layout UI.
 - **Version Control Tools**: Such as Git for managing theme updates and changes.
 
