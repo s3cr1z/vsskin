@@ -1,3 +1,20 @@
+# Brand Guidelines and API Links
+
+This document provides the brand guidelines and API links for fetching brand data to be used in the vsskin web app.
+
+## Brand Guidelines
+
+The vsskin web app integrates brand guidelines to ensure that the themes are consistent with the branding of popular tech companies. The brand guidelines include:
+
+- **Colors**: The primary and secondary colors used by the brand.
+- **Fonts**: The typefaces and font styles used by the brand.
+- **Logos**: The official logos and their usage guidelines.
+- **Imagery**: The style and types of images used by the brand.
+
+## API Links
+
+The following table lists the API links for fetching brand data from Brandfetch:
+
 | Brand Name   | API Link |
 |--------------|----------|
 | Cash App | [API Link](https://brandfetch.com/developers/brand-api?alias=cash.app) |
