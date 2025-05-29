@@ -53,4 +53,25 @@ This guide bridges all documentation in the `docs/` folder to provide a unified 
   3. Generate themes dynamically in the app
   4. Display brands in a slider for user selection
 
-This guide provides a comprehensive roadmap for development. For detailed instructions, refer to the linked documents above.
+## 9. Project Setup Steps
+1. **Set Up Project Structure**: Create the necessary directories and files for the project.
+2. **Install Dependencies**: Use npm to install required packages, including React and IBM Carbon Design System.
+3. **Initialize Git Repository**: Set up version control for the project using Git.
+4. **Configure Build Tools**: Set up build tools like Webpack or Create React App for development and production builds.
+5. **Set Up Linting and Formatting**: Configure ESLint and Prettier for code quality and consistency.
+6. **Create Initial Components**: Start building the initial components and layout for the application.
+
+## 10. Integration of IBM Carbon Design System
+1. **Install Carbon Design System**: Use npm to install Carbon Design System packages.
+2. **Import Carbon Styles**: Import Carbon CSS files into the project.
+3. **Set Up Theme Provider**: Configure the theme provider to manage light and dark themes.
+4. **Use Carbon Components**: Replace default HTML elements with Carbon Design System components.
+5. **Customize Carbon Tokens**: Override Carbon Design System tokens to match the vsskin branding.
+6. **Test Integration**: Ensure that the Carbon Design System components are working correctly and consistently across the application.
+
+## 11. Implementation of AI-Driven Components
+1. **Install AI Components**: Use npm to install Carbon for AI components.
+2. **Integrate AI Label Component**: Use the AI label component to indicate AI-generated content.
+3. **Apply AI Layer Styling**: Use AI-specific styles for components displaying AI-generated content.
+4. **Provide Explainability**: Add explanations for AI-driven features, including how recommendations are generated and what data is used.
+5. **Test AI Integration**: Ensure that AI-driven components are working correctly and providing a seamless user experience.
